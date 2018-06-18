@@ -1,0 +1,19 @@
+<mat-card>
+ <mat-card-title>Weather forecast for 5 days</mat-card-title><hr><br>
+ <form [formGroup]="forecastForm" (ngSubmit)="onSubmit()">
+        <input type="text" formControlName="forecastCity" placeholder="Name of city">
+        <button mat-fab color="primary">go</button>
+</form><br><hr>
+<mat-card-content>
+<div class="wrapper">
+  <div class="forecast" *ngFor="let dayWeather of forecast">
+    <div class="day">
+      <h2 class="date">Date: {{dayWeather.date | date: 'MMMM d'}}</h2>
+      <img src="https://openweathermap.org/img/w/{{dayWeather.img}}.png">
+      <h3 class="description">Kind Of Weather: {{dayWeather.description | uppercase}}</h3>
+      <h3 class="tempM">Forecasted Temperature: {{dayWeather.temp}}&deg;</h3>
+    </div><hr>
+  </div>
+</div>
+</mat-card-content>
+</mat-card>

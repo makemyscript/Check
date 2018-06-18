@@ -1,0 +1,10 @@
+<mat-card>
+     <mat-card-title>Chart Display</mat-card-title><hr><br>
+     <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+        <input type="text" ngModel name="cityName" placeholder="Type city name">
+        <button mat-fab color="primary">Search</button>
+     </form><br><br>
+     <div *ngIf='chart' class="chart-container">
+             <canvas id="canvas">{{ chart }}</canvas>
+     </div>
+</mat-card>

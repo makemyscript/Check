@@ -1,0 +1,27 @@
+
+form{
+    text-align: center;
+}
+input{
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+.chart-container {
+    position: relative;
+    margin: auto;
+    height: 60vh;
+    width: 60vw;
+}
+@media (max-width: 720px) {
+    .chart-container {
+        position: relative;
+        margin: auto;
+        height: 80vh;
+        width: 120vw;
+    }
+}
+mat-card-title{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}

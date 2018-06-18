@@ -1,0 +1,26 @@
+<mat-card>
+  <mat-card-title>weather forecast</mat-card-title><hr><br>
+ <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+        <input type="text" ngModel name="cityName" placeholder="Type city name">
+        <button mat-fab color="primary">Search</button>
+  </form><br><br>
+  <mat-card-content>
+    <img mat-card-image src="https://openweathermap.org/img/w/{{weather.icon}}.png"><br>  
+    Name Of the city: <b>{{weather.cityName}}</b>
+  </mat-card-content>
+  <mat-card-content>
+    Temperature: <b>{{weather.temp}}&deg;</b>
+  </mat-card-content>
+  <mat-card-content>
+    Kind Of weather: <b>{{weather.weatherKind | uppercase}}</b>
+  </mat-card-content>
+  <mat-card-content>
+    Max: <b>{{weather.tempMax}}&deg;</b>
+  </mat-card-content>
+  <mat-card-content>
+    Min: <b>{{weather.tempMin}}&deg;</b>
+  </mat-card-content>
+  
+</mat-card>
+
+
